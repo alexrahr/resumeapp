@@ -1,0 +1,29 @@
+<h1>Listing resume_collections</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @resume_collections.each do |resume_collection| %>
+      <tr>
+        <td><%= resume_collection.name %></td>
+        <td><%= resume_collection.user %></td>
+        <td><%= link_to 'Show', resume_collection %></td>
+        <td><%= link_to 'Edit', edit_resume_collection_path(resume_collection) %></td>
+        <td><%= link_to 'Destroy', resume_collection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Resume collection', new_resume_collection_path %>

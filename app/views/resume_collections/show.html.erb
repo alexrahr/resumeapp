@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @resume_collection.name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @resume_collection.user %>
+</p>
+
+<%= link_to 'Edit', edit_resume_collection_path(@resume_collection) %> |
+<%= link_to 'Back', resume_collections_path %>

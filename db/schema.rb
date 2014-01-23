@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140123080338) do
+ActiveRecord::Schema.define(version: 20140123082146) do
+
+  create_table "resume_collections", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "resume_collections", ["user_id"], name: "index_resume_collections_on_user_id"
 
   create_table "roles", force: true do |t|
     t.string   "name"
